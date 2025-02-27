@@ -2,12 +2,14 @@ import json
 import requests
 import sys
 import os
-
+from pathlib import Path
 
 class Actividad_1():
     def __init__(self):
-        self.ruta_static="src/pad/static/"
-        self.ruta_json="src/pad/static/json"
+        ruta_actual = str(Path.cwd())
+
+        self.ruta_static="{}/src/pad/static/".format(ruta_actual)
+        self.ruta_json="{}/src/pad/static/json".format(ruta_actual)
         directorio = os.path.dirname(self.ruta_json)
         if not os.path.exists(directorio):
             os.makedirs(directorio)
