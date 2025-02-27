@@ -1,11 +1,16 @@
 import json
 import requests
 import sys
+import os
 
 
 class Actividad_1():
     def __init__(self):
         self.ruta_static="src/pad/static/"
+        self.ruta_json="src/pad/static/json"
+        directorio = os.path.dirname(self.ruta_json)
+        if not os.path.exists(directorio):
+            os.makedirs(directorio)
         sys.stdout.reconfigure(encoding='utf-8')
         
     def leer_api(self, url):
