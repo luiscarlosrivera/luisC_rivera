@@ -25,7 +25,7 @@ class Actividad_1():
         with open(ruta_json, 'w') as file:
             json.dump(datos, file, indent=4)
         return True 
-
+#
 
 ingestion = Actividad_1()
 datos_json =ingestion.leer_api("https://api.github.com/users/hadley/orgs")
