@@ -9,7 +9,7 @@ class Actividad_1():
         ruta_actual = str(Path.cwd())
 
         self.ruta_static="{}/src/pad/static/".format(ruta_actual)
-        self.ruta_json="{}/src/pad/static/json/".format(ruta_actual)
+        self.ruta_json="{}/src/pad/static/json/datos.json".format(ruta_actual)
         directorio = os.path.dirname(self.ruta_json)
         if not os.path.exists(directorio):
             os.makedirs(directorio)
