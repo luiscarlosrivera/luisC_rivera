@@ -1,5 +1,5 @@
 import json
-import requere
+import requests  
 import sys
 import os
 from pathlib import Path
@@ -16,7 +16,7 @@ class Actividad_1():
         sys.stdout.reconfigure(encoding='utf-8')
         
     def leer_api(self, url):
-        response = requere.get(url)
+        response = requests.get(url)
         return response.json()
     
     def escribir_json(self, datos, nombre_archivo):
