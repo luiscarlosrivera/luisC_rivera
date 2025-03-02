@@ -21,7 +21,7 @@ class Actividad_1():
     
     def escribir_json(self, datos, nombre_archivo):
         ruta_json = self.ruta_static+nombre_archivo
-        ruta_json = "{}json/{}".format(self.ruta_static,nombre_archivo)
+        ruta_json = "{}/json/{}".format(self.ruta_static,nombre_archivo)
         with open(ruta_json, 'w') as file:
             json.dump(datos, file, indent=4)
         return True 
