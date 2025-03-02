@@ -29,7 +29,7 @@ class Actividad_1():
 
 
 ingestion = Actividad_1()
-datos_json =ingestion.leer_api("https://api.github.com/users/hadley/orgs")
+datos_json =ingestion.leer_api("https://stephen-king-api.onrender.com/api/shorts")
 escribir_json = ingestion.escribir_json(datos_json, "datos.json")
 
 print("esta es la ruta statica",ingestion.ruta_static)
