@@ -63,18 +63,20 @@ class Actividad_2:
     def punto_5(self):
         array_aleatorio = np.random.rand(100)
         valor_maximo = np.max(array_aleatorio)
-        indice_maximo = np.argmax(array_aleatorio) 
+        indice_maximo = np.argmax(array_aleatorio)
         valor_minimo = np.min(array_aleatorio)
         indice_minimo = np.argmin(array_aleatorio)
-        self.df.loc[4,"valor"] = str[array_aleatorio, valor_maximo, indice_maximo, valor_minimo,  indice_minimo]
+        lista_valores = [array_aleatorio, valor_maximo, indice_maximo, valor_minimo, indice_minimo]
+        self.df.loc[4, "valor"] = str(lista_valores)
+
         
 
     #Crea un array de tamaño 3x1 y uno de 1x3, y súmalos utilizando broadcasting para obtener un array de 3x3
     def punto_6(self):
-        array_3x1 = np.array([1, 2, 3]).reshape(3, 1)
-        array_1x3 = np.array([4, 5, 6]).reshape(1, 3)
+        array_3x1 = np.random.randint(1,10,3).reshape(3,1)
+        array_1x3 = np.random.randint(1,10,3).reshape(1,3)
         suma = array_3x1 + array_1x3
-        self.df.loc[5,"valor"] = str [array_3x1, array_1x3, suma]
+        self.df.loc[5,"valor"] =array_3x1, array_1x3, suma
         
    
   
@@ -82,7 +84,7 @@ class Actividad_2:
     def punto_7(self):
         matriz = np.random.randint(0, 100, (5, 5))
         submatriz = matriz[1:3, 1:3]
-        self.df.loc[6,"valor"] = str [matriz, submatriz]
+        self.df.loc[6,"valor"] = [matriz, submatriz]
         
 
     #Crea un array de ceros de tamaño 10 y usa indexado para cambiar el valor de los elementos en el rango de índices 3 a 6 a 5
@@ -240,7 +242,7 @@ class Actividad_2:
         self.punto_2()
         self.punto_3()
         self.punto_4()
-        #self.punto_5()
+        self.punto_5()
         #self.punto_6()
         #self.punto_7()
         self.punto_8()
