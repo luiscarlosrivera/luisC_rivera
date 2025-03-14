@@ -28,10 +28,12 @@ jobs:
         run: pip install -e .
       - name: paso5 - Ejecutar script
         run: python src/pad/actividad_1.py
+      - name: paso6 - Ejecutar Actividad 2
+        run: python src/pad/actividad_2.py
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Update Test
+          commit_message: entregables 1 y 2
           commit_user_name: Luis Rivera [GitHub Actions]
           commit_user_email: luis.rivera@iudigital.edu.co
           commit_author: Luis Rivera <luis.rivera@iudigital.edu.co>
