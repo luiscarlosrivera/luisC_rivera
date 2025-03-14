@@ -7,7 +7,7 @@ import os
 
 class Actividad_2:
     def __init__(self):
-        #datos=[(0,1), (0,2), (0,3), (0,4), (0,5), (0,6), (0,7), (0,8), (0,9), (0,10)]
+        
         datos = {
             "# ejercicio": list(range(1, 22)),
             "valor": [x*0 for x in range(1, 22)]
