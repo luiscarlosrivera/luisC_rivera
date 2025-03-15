@@ -130,7 +130,6 @@ class Actividad_2:
         plt.plot(x, np.sin(x), color="red")
         ruta = "{}punto_12.png".format(self.ruta_img)
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[11,"valor"] = str(ruta)
     #Utiliza la función np.meshgrid para crear una cuadrícula y luego aplica la función z = np.cos(x) + np.sin(y) para generar y mostrar un gráfico de contorno
     def punto_13(self):
@@ -139,7 +138,6 @@ class Actividad_2:
         plt.contour(x, y, z)
         ruta = "{}punto_13.png".format(self.ruta_img)  
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[12,"valor"] = str(ruta)
 
     #Crea un gráfico de dispersión con 1000 puntos aleatorios y utiliza la densidad de estos puntos para ajustar el color de cada punto
@@ -150,7 +148,6 @@ class Actividad_2:
         plt.colorbar()
         ruta = "{}punto_14.png".format(self.ruta_img)
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[13,"valor"] = str(ruta)
 
     #A partir de la misma función del punto_12, genera un gráfico de contorno lleno
@@ -161,7 +158,6 @@ class Actividad_2:
         plt.colorbar()
         ruta = "{}punto_15.png".format(self.ruta_img)
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[14,"valor"] = str(ruta)
 
     #Añade etiquetas para el eje X (‘Eje X’), eje Y (‘Eje Y’) y un título (‘Gráfico de Dispersión’) a tu gráfico de dispersión del ejercicio 12 y crea leyendas para cada gráfico usando código LaTex
@@ -177,7 +173,6 @@ class Actividad_2:
         plt.legend()
         ruta = "{}punto_16.png".format(self.ruta_img)
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[15,"valor"] = str(ruta)
 
     #Crea un histograma a partir de un array de 1000 números aleatorios generados con una distribución normal
@@ -186,7 +181,6 @@ class Actividad_2:
         plt.hist(x, bins=30, alpha=0.5, color="blue", edgecolor="black")
         ruta = "{}punto_17.png".format(self.ruta_img)
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[16,"valor"] = str(ruta)
     
     #Genera dos sets de datos con distribuciones normales diferentes y muéstralos en el mismo histograma
@@ -198,7 +192,6 @@ class Actividad_2:
         plt.legend()
         ruta = "{}punto_18.png".format(self.ruta_img)
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[17,"valor"] = str(ruta)
     
     #Experimenta con diferentes valores de bins (por ejemplo, 10, 30, 50) en un histograma y observa cómo cambia la representación
@@ -209,8 +202,7 @@ class Actividad_2:
         plt.hist(x, bins=50, alpha=0.5, color="green", edgecolor="black", label="50")
         plt.legend()
         ruta = "{}punto_19.png".format(self.ruta_img)
-        plt.savefig(ruta)
-        plt.show()    
+        plt.savefig(ruta)   
         self.df.loc[18,"valor"] = str(ruta) 
     
     #Añade una línea vertical que indique la media de los datos en el histograma
@@ -221,7 +213,6 @@ class Actividad_2:
         plt.legend()
         ruta = "{}punto_20.png".format(self.ruta_img)
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[19,"valor"] = str(ruta)
 
     #Crea histogramas superpuestos para los dos sets de datos del ejercicio 17, usando colores y transparencias diferentes para distinguirlos
@@ -233,7 +224,6 @@ class Actividad_2:
         plt.legend()
         ruta = "{}punto_21.png".format(self.ruta_img)
         plt.savefig(ruta)
-        plt.show()
         self.df.loc[20,"valor"] = str(ruta)
     
 
