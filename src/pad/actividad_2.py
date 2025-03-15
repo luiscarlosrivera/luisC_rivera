@@ -39,7 +39,7 @@ class Actividad_2:
     def punto_3(self):
         array_5_1 = np.random.randint(1,10,5)
         array_5_2 = np.random.randint(1,10,5)
-        self.df.loc[2,"valor"] = str(array_5_1*array_5_2)
+        self.df.loc[2,"valor"] = f"{array_5_1}, {array_5_2}, {array_5_1*array_5_2}"
         
 
 
@@ -53,10 +53,9 @@ class Actividad_2:
         try:
             matriz_inversa = np.linalg.inv(matriz)
             self.df["# ejercicio"] = 4
-            self.df["valor"] = [matriz, matriz_inversa ]
-            self.df.loc[3,"valor"] = str(matriz_inversa)
+            self.df.loc[3,"valor"] = f"{matriz}, {matriz_inversa}"
         except np.linalg.LinAlgError:
-            self.df.loc[3,"valor"] = "La matriz no tiene inversa (es singular)."
+            self.df.loc[3,"valor"] = f"{matriz} " + "La matriz no tiene inversa"
 
     #Encuentra los valores máximo y mínimo en un array de 100 elementos aleatorios y muestra sus índices
 
@@ -66,8 +65,7 @@ class Actividad_2:
         indice_maximo = np.argmax(array_aleatorio)
         valor_minimo = np.min(array_aleatorio)
         indice_minimo = np.argmin(array_aleatorio)
-        lista_valores = [array_aleatorio, valor_maximo, indice_maximo, valor_minimo, indice_minimo]
-        self.df.loc[4, "valor"] = str(lista_valores)
+        self.df.loc[4, "valor"] = f"{array_aleatorio}, {valor_maximo}, {indice_maximo}, {valor_minimo}, {indice_minimo}"   
 
         
 
@@ -76,7 +74,7 @@ class Actividad_2:
         array_3x1 = np.random.randint(1,10,3).reshape(3,1)
         array_1x3 = np.random.randint(1,10,3).reshape(1,3)
         suma = array_3x1 + array_1x3
-        self.df.loc[5,"valor"] =array_3x1, array_1x3, suma
+        self.df.loc[5,"valor"] =f"{array_3x1}, {array_1x3}, {suma}"
         
    
   
@@ -84,7 +82,7 @@ class Actividad_2:
     def punto_7(self):
         matriz = np.random.randint(0, 100, (5, 5))
         submatriz = matriz[1:3, 1:3]
-        self.df.loc[6,"valor"] = [matriz, submatriz]
+        self.df.loc[6,"valor"] = f"{matriz}, {submatriz}"
         
 
     #Crea un array de ceros de tamaño 10 y usa indexado para cambiar el valor de los elementos en el rango de índices 3 a 6 a 5
@@ -99,14 +97,14 @@ class Actividad_2:
     def punto_9(self):
         matriz = np.random.randint(0, 100, (3, 3))
         matriz_invertida = matriz[::-1]
-        self.df.loc[8,"valor"] = str (matriz_invertida)
+        self.df.loc[8,"valor"] = f"{matriz}, {matriz_invertida}"
         
 
     #Dado un array de números aleatorios de tamaño 10, selecciona y muestra solo aquellos que sean mayores a 0.5
     def punto_10(self):
         array_aleatorio = np.random.rand(10)
         array_mayores_05 = array_aleatorio[array_aleatorio > 0.5]
-        self.df.loc[9,"valor"] = str (array_mayores_05)
+        self.df.loc[9,"valor"] = f"{array_aleatorio}, {array_mayores_05}"
         
 
     #Genera dos arrays de tamaño 100 con números aleatorios y crea un gráfico de dispersión
@@ -117,8 +115,8 @@ class Actividad_2:
         y = np.random.rand(num)
         plt.scatter(x,y)
         ruta = "{}punto_11.png".format(self.ruta_act2)
-        plt.savefig(ruta)
-        self.df.loc[10,"valor"] = str(ruta)
+        plt.savefig(self.ruta_act2 + "punto_11.png")    
+        self.df.loc[10,"valor"] = f"{x}, {y}, {ruta}"
 
     #Genera un gráfico de dispersión las variables 𝑥 y 𝑦 = 𝑠𝑖𝑛(𝑥)+ ruido Gaussiano. Donde x es un array con númereos entre -2𝜋 𝑦 2𝜋. Grafica también los puntos 𝑦 = 𝑠𝑖𝑛(𝑥) en el mismo plot
     def punto_12(self,num=100):
@@ -243,8 +241,8 @@ class Actividad_2:
         self.punto_3()
         self.punto_4()
         self.punto_5()
-        #self.punto_6()
-        #self.punto_7()
+        self.punto_6()
+        self.punto_7()
         self.punto_8()
         self.punto_9()
         self.punto_10()
