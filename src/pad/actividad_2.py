@@ -262,6 +262,7 @@ class Actividad_2:
         self.punto_21()
         self.df.to_csv("{}Actividad_2.csv".format(self.ruta_csv), index=False)
 
+
 ene = Actividad_2()
 ene.ejecutar()
 
