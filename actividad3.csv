@@ -1,0 +1,52 @@
+,n_punto,detalle,resultado
+0,1,Crea un DataFrame frutas que luzca así,src/pad/actividad_3/frutas.csv
+1,2,Crea un DataFrame ventas_frutas que coincida con el diagrama,src/pad/actividad_3/frutas.csv
+2,3,Crea una variable utensilios con una Serie que tenga el siguiente aspecto,src/pad/actividad_3/utencilios.csv
+3,4,"Descarga el dataset 'wine review' desde Kaggle y cárgalo en un DataFrame llamado review, tal y como se muestra en la figura",src/pad/actividad_3/winemag-data-130k-v2.csv
+4,5,Visualiza las primeras filas del DataFrame,src/pad/actividad_3/primeros_5.csv
+5,6,Utiliza el método .info() para averiguar cuántas entradas hay. ¿Cuántas encontraste?,129971
+6,7,¿Cuál es el precio promedio?,35.363389129985535
+7,8,Cuál es el precio más alto pagado,3300.0
+8,9,Crea un DataFrame con todos los vinos de california Salida,src/pad/actividad_3/vinos_california.csv
+9,10,Utiliza idxmax() para encontrar el índice del vino con el precio más alto y luego utiliza loc para obtener toda la información de ese vino específico,"Índice del vino con el precio más alto: 80290
+Información del vino:
+Unnamed: 0                                                           80290
+country                                                             France
+description              This ripe wine shows plenty of blackberry frui...
+designation                                                            NaN
+points                                                                  88
+price                                                               3300.0
+province                                                          Bordeaux
+region_1                                                             Médoc
+region_2                                                               NaN
+taster_name                                                     Roger Voss
+taster_twitter_handle                                           @vossroger
+title                                 Château les Ormes Sorbet 2013  Médoc
+variety                                           Bordeaux-style Red Blend
+winery                                            Château les Ormes Sorbet
+Name: 80290, dtype: object"
+10,11,¿Cuáles son los tipos de uva más comunes en California?,"variety
+Pinot Noir             6896
+Cabernet Sauvignon     5693
+Chardonnay             5183
+Zinfandel              2639
+Syrah                  1870
+                       ... 
+Prosecco                  1
+Tannat-Syrah              1
+Rosado                    1
+Muscat d'Alexandrie       1
+Alvarinho                 1
+Name: count, Length: 194, dtype: int64"
+11,12,¿Cuáles son los 10 tipos de uva más comunes en California?,"variety
+Pinot Noir                  6896
+Cabernet Sauvignon          5693
+Chardonnay                  5183
+Zinfandel                   2639
+Syrah                       1870
+Sauvignon Blanc             1807
+Red Blend                   1804
+Merlot                      1391
+Bordeaux-style Red Blend     876
+Petite Sirah                 694
+Name: count, dtype: int64"
