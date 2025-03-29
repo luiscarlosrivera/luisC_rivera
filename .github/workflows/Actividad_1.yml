@@ -30,10 +30,12 @@ jobs:
         run: python src/pad/actividad_1.py
       - name: paso6 - Ejecutar Actividad 2
         run: python src/pad/actividad_2/actividad_2.py
+      - name: paso7 - Ejecutar Actividad 3
+        run: python src/pad/actividad_3/Actividad_3.py
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: entregables 1 y 2
+          commit_message: entregables 1, 2 y 3
           commit_user_name: Luis Rivera [GitHub Actions]
           commit_user_email: luis.rivera@iudigital.edu.co
           commit_author: Luis Rivera <luis.rivera@iudigital.edu.co>
