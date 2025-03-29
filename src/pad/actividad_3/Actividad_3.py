@@ -154,5 +154,4 @@ class actividad3:
         self.df.to_csv("actividad3.csv")
         
 act = actividad3()
-#act. punto_6()
 act.ejecutar()
