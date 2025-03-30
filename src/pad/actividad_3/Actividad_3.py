@@ -8,6 +8,7 @@ class actividad3:
     def __init__(self, ruta_dataset=""):
         self.ruta_raiz=os.path.abspath(os.getcwd())
         self.ruta_act3 = "{}/src/pad/actividad_3/".format(self.ruta_raiz)
+        self.ruta_csv = "{}csv/".format(self.ruta_act3)
         datos = {
             "n_punto": [1,2,3,4,5,6,7,8,9,10,11,12],
             "detalle":["Crea un DataFrame frutas que luzca así","Crea un DataFrame ventas_frutas que coincida con el diagrama","Crea una variable utensilios con una Serie que tenga el siguiente aspecto","Descarga el dataset 'wine review' desde Kaggle y cárgalo en un DataFrame llamado review, tal y como se muestra en la figura","Visualiza las primeras filas del DataFrame","Utiliza el método .info() para averiguar cuántas entradas hay. ¿Cuántas encontraste?","¿Cuál es el precio promedio?","Cuál es el precio más alto pagado","Crea un DataFrame con todos los vinos de california Salida","Utiliza idxmax() para encontrar el índice del vino con el precio más alto y luego utiliza loc para obtener toda la información de ese vino específico","¿Cuáles son los tipos de uva más comunes en California?","¿Cuáles son los 10 tipos de uva más comunes en California?"],
@@ -151,7 +152,7 @@ class actividad3:
         self.punto_10()
         self.punto_11()
         self.punto_12()
-        self.df.to_csv("actividad3.csv")
+        self.df.to_csv("{}Actividad_3.csv".format(self.ruta_csv), index=False)
         
 act = actividad3()
 act.ejecutar()
